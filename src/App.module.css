@@ -1,0 +1,18 @@
+.Navigation{
+    width: 100%;
+    color: white;
+    font-size: 1.35em;
+    display: flex;
+    justify-content: space-between;
+    background: deepskyblue;
+    padding: .75em 1em .75em 1.5em;
+}
+.Link a{
+    padding: .75em 1em .75em 1.5em;
+    text-decoration: none;
+}
+.Link a:hover{
+    background-color: white;
+    color: deepskyblue;
+    
+}

@@ -1,0 +1,9 @@
+.VideoContainer{
+    width: 100%;
+    color: white;
+    font-size: 1.35em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: .75em 1em .75em 1.5em;
+}
