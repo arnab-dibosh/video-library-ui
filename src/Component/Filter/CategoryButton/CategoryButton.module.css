@@ -2,12 +2,9 @@
     height: 40px;
     font-size: 12px;
     margin-left: 10px;
+    background-color: lightskyblue;
 }
-.White{
-    background: skyblue;
-}
-
-.Red{
+.selected{
     background: lightgreen;
 }
 

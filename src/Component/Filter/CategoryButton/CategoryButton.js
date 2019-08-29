@@ -13,7 +13,7 @@ class categoryButton extends Component {
     }
     render() {
         const { category } = this.props;
-        const isSelectedStyle = this.state.isSelected? classes.Red: classes.White
+        const isSelectedStyle = this.state.isSelected? classes.selected: ''
         const buttonStyle = [isSelectedStyle, classes.CategoryButton].join(' ') 
         return (
         <button className={buttonStyle}               
