@@ -22,6 +22,11 @@ class SearchVideo extends Component{
          this.setState({
                 selectedCategories: selectedCategories
             })
+        this.populateVideos(selectedCategories);             
+    }
+
+    populateVideos=(selectedCategories)=>{
+        
         const headers = {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -36,7 +41,7 @@ class SearchVideo extends Component{
             }
 
             let videos=[];
-            axios.post('/getVideo', data, {headers: headers})
+            axios.post('/getVideoByCategory', data, {headers: headers})
             .then((response) => {
                 console.log(response);
             videos=response.data.videos;
@@ -53,15 +58,15 @@ class SearchVideo extends Component{
                     filteredVideos: []
                 })
         }
-             
     }
 
     componentDidMount(){
          axios.get('/getCategories')
         .then((response) => {
-           // console.log(response);
+           // console.log(response.data.categories);
           var cats= response.data.categories.map(cat=> cat.catName);
-          this.setState({categories:cats});
+          this.setState({categories:cats, selectedCategories: cats});
+          this.populateVideos(cats);
         })
         .catch(function (error) {
             console.log(error);

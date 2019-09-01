@@ -3,7 +3,7 @@ import classes from './CategoryButton.module.css';
 
 class categoryButton extends Component {
     state = {
-        isSelected: false
+        isSelected: true
     }
     handleCategoryToggleonClick = () => {
         const { category, onClickCategoryBtn } = this.props;
