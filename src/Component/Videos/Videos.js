@@ -1,10 +1,8 @@
 import React, {Component} from "react";
-import Filter from '../Filter/Filter';
 import Thumbnail from './Thumbnail/Thumbnail'
 import classes from './Video.module.css'
 
 class Videos extends Component{
-   
     
     render(){ 
         console.log( this.props.filteredVideos);

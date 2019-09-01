@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import axios from 'axios';
 import Class from './AddVideo.module.css';
-import Select from 'react-select';
 import Creatable from 'react-select/creatable';
 
 
@@ -50,8 +49,6 @@ class AddVideo extends Component{
                 link: '', 
                 selectedCategory: null
                 });
-
-           // if(this.props.editMode) console.log(this.props.history);
         })
         .catch(function (error) {
             console.log(error);
@@ -120,6 +117,3 @@ class AddVideo extends Component{
 }
 
 export default AddVideo;
-
-//<input value={this.state.category} className={Class.Input} placeholder="Categories" type="text" name="category"  onChange={(e)=>{this.handleInputChange(e,'category')}}/>
-                        

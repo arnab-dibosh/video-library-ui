@@ -43,8 +43,8 @@ class SearchVideo extends Component{
             let videos=[];
             axios.post('/getVideoByCategory', data, {headers: headers})
             .then((response) => {
-                console.log(response);
-            videos=response.data.videos;
+
+                videos=response.data.videos;
                 this.setState({
                     filteredVideos: videos
                 })
@@ -63,7 +63,7 @@ class SearchVideo extends Component{
     componentDidMount(){
          axios.get('/getCategories')
         .then((response) => {
-           // console.log(response.data.categories);
+            
           var cats= response.data.categories.map(cat=> cat.catName);
           this.setState({categories:cats, selectedCategories: cats});
           this.populateVideos(cats);
@@ -74,7 +74,7 @@ class SearchVideo extends Component{
     }
 
     render(){
-        const { categories, selectedCategories } = this.state;
+        const { categories} = this.state;
         return(
             <div> 
                 <Filter categories={categories} onClickCategory={this.handleCategoryClick} />

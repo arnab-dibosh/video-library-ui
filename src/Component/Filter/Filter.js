@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import CategoryButton from './CategoryButton/CategoryButton'
 import classes from './Filter.module.css'
 

@@ -2,11 +2,11 @@ import React from 'react'
 import classes from './Thumbnail.module.css'
 
 function thumbnail (props) {
-    const { link, title } = props;
+    const { link, title, key } = props;
      
     return (
       <div className={classes.Thumbnail}>
-        <iframe src={link} ></iframe>
+        <iframe title={key} src={link} ></iframe>
         <div>{title}</div>
       </div>
     )

@@ -5,7 +5,7 @@ class TableRow extends Component {
   render() {
     const { selectedRowId } = this.props;
     const rowId = this.props.video.id;
-    const highlightClass = selectedRowId == rowId ? "video-row-selected" : "";
+    const highlightClass = selectedRowId === rowId ? "video-row-selected" : "";
 
     const categories= this.props.video.categories.map(cat=>cat.catName).join(', ');
     

@@ -25,7 +25,3 @@ class categoryButton extends Component {
 }
 
 export default categoryButton;
-
-// OnClick = toggle the isSelected prop of the button
-// OnClick = if isSelected is true for the button then add it to the selectedCategories list in the parent (SearchVideo) 
-  

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import AddVideo from './../AddVideo/AddVideo';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import TableRow from './../TableRow/TableRow';
 
@@ -30,7 +29,6 @@ export default class VideoList extends Component {
     const selectedRowId = this.state.selectedRowId;
     const toggleSelection = selectedRowId === rowId;
     rowId = toggleSelection ? null : rowId;
-    console.log("selected", rowId);
     this.setState({
       selectedRowId: rowId
     });
@@ -85,7 +83,7 @@ export default class VideoList extends Component {
   
   render() {
   
-    const { selectedRowId, videoList } = this.state;
+    const { selectedRowId } = this.state;
     
     const actionButtons = (
       <div className="actionButtons">

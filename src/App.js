@@ -16,19 +16,14 @@ class App extends Component {
   setAuthToken = (authToken) => {
     localStorage.setItem('authToken',authToken);
     this.setState({authToken: authToken});
-    //console.log()
   }
 
   componentDidMount() {
-    // See if localStorage has authToken
     if(!this.state.authToken) {
       if(localStorage.getItem('authToken')) {
         this.setState({authToken: localStorage.getItem('authToken')})
       }
     }
-    // If no token then then Login
-    // Else set the authToken state from LocalStorage
-
   }
 
   handleLogOut=()=>{
@@ -37,7 +32,6 @@ class App extends Component {
   }
 
   setSelectdVideo= (selectedRow)=>{
-    //console.log(selectedRow);
     this.setState({selectedRow: selectedRow})
   }
 
@@ -49,7 +43,7 @@ class App extends Component {
             <Link to="/VideoList">Video List</Link>
             <Link to="/Search">Search</Link>
           </div>
-          <button onClick={this.handleLogOut}>Log Out</button>
+          <button className="btn btn-danger" onClick={this.handleLogOut}>Log Out</button>
         </div>
     )
 
