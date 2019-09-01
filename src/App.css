@@ -1,0 +1,14 @@
+.table-striped tbody tr.video-row-selected {
+  background: orange;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+}
+.padding {
+    margin-left: 10px;
+    width: 100px;
+}
+
+
